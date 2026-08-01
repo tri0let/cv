@@ -24,7 +24,7 @@
 
 % Change the fonts if you want
 \ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
-  \usepackage{fontspec} 
+  \usepackage{fontspec}
   %% You can use \setmainfont etc; I'm just using these font packages here because they provide OpenType fonts for use by XeLaTeX/LuaLaTeX anyway
   \usepackage[p,osf,swashQ]{cochineal}
   \usepackage[medium,bold]{cabin}
@@ -35,6 +35,9 @@
   \usepackage{cabin}
   \usepackage[varqu,varl,scale=0.9]{zi4}
 \fi
+
+\usepackage{fontawesome5}
+\usepackage{stackengine}
 
 % Change the page margins if you want
 % \geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
@@ -50,3 +53,5 @@
 %% Photo is only shown if "fullonly" is included
 \includecomment{fullonly}
 % \excludecomment{fullonly}
+
+\newcommand{\stackdate}[2]{\stackanchor[1pt]{\scriptsize{\textsc{#1}}}{#2}}
